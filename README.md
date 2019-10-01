@@ -3,19 +3,24 @@
 This is a small extension that shows you a notification if you are opening a
 project and there are new changes on the remote.
 
-It is highly advised to run this extension with the configuration
+> It is highly advised to run this extension with the configuration
 `"git.autofetch"` set to `true`, so that you will get notified without having
 to manually run `git fetch` all the time.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+![Notification](./documentation/images/screenshot.png)
 
-For example if there is an image subfolder under your extension project workspace:
+As you can see in the lower right corner there is a very small indicator that
+there are new changes to pull from the remote. To make this more obvious this
+extension displays a notification if there are new changes to pull from the
+remote branch.
 
-\!\[feature X\]\(images/feature-x.png\)
+The notification is an `error`-notification, because all other notifications in
+vscode disappear after a certain amount of time and I wanted them to be sticky.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+There is also a button to run `git pull` to obtain the new changes from the
+remote.
 
 ## Requirements
 

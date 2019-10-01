@@ -4,6 +4,6 @@ All notable changes to the "am-i-behind" extension will be documented in this fi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [v1.0.0]
 
 - Initial release
