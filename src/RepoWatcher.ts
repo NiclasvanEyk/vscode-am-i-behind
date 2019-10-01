@@ -35,7 +35,10 @@ export class RepositoryWatcher {
             `There ${behind === 1
                 ? 'is'
                 : 'are'
-            } ${behind} new commits available on the remote!`,
+            } ${behind} new ${behind === 1
+                ? 'commit'
+                : 'commits'
+            } available on the remote!`,
             ModalChoice.PULL_NOW
 		).then(choice => {
             if (choice === ModalChoice.PULL_NOW) {
