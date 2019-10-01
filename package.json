@@ -1,8 +1,16 @@
 {
 	"name": "am-i-behind",
-	"displayName": "am-i-behind",
-	"description": "",
-	"version": "0.0.1",
+	"displayName": "Am I Behind",
+	"description": "A simple extension that reminds you to pull changes from the remote branch",
+	"version": "1.0.0",
+	"publisher": "NiclasvanEyk",
+	"repository": {
+		"url": "https://github.com/NiclasvanEyk/vscode-am-i-behind",
+		"type": "git"
+	},
+	"author": {
+		"name": "Niclas van Eyk"
+	},
 	"engines": {
 		"vscode": "^1.38.0"
 	},
