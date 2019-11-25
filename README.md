@@ -28,5 +28,5 @@ The official [Git Extension](https://github.com/Microsoft/vscode/tree/master/ext
 
 ## Extension Settings
 
-At the time there are no settings available. If you have any suggestions
-[feel free to open an issue](https://github.com/NiclasvanEyk/vscode-am-i-behind/issues);
+You can specify the type of the shown notification. This way you can make the
+notification sticky, if you set the `"notificationLevel"`-setting to `"error"`.

@@ -2,7 +2,7 @@
 	"name": "am-i-behind",
 	"displayName": "Am I Behind",
 	"description": "A simple extension that reminds you to pull changes from the remote branch",
-	"version": "1.0.1",
+	"version": "1.1.1",
 	"publisher": "NiclasvanEyk",
 	"repository": {
 		"url": "https://github.com/NiclasvanEyk/vscode-am-i-behind",
@@ -21,7 +21,27 @@
 		"*"
 	],
 	"main": "./out/extension.js",
-	"contributes": {},
+	"contributes": {
+		"configuration": {
+			"properties": {
+			  "am-i-behind.notificationLevel": {
+				"type": "string",
+				"enum": [
+					"info",
+					"warning",
+					"error"
+				],
+				"enumDescriptions": [
+					"The extension will show notifications as normal \"info\" notifications that will disappear after a few seconds. (default)",
+					"The extension will show notifications as \"warning\" notifications that will disappear after a few seconds.",
+					"The extension will show notifications as \"error\" notifications that will only disappear after being dismissed manually or clicking on a button of the notification."
+				],
+				"default": "info",
+				"description": "Sets the level for the notification to be shown. You can make the notification sticky by setting this to \"error\"."
+			  }
+			}
+		}
+	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",

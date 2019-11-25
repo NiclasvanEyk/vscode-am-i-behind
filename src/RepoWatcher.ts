@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { Repository, RepositoryState } from '../libs/git';
 import { log } from './log';
+import { showNotification } from './show-notification';
 
 enum ModalChoice {
     PULL_NOW = 'Run \'git pull\' now',
@@ -31,7 +32,7 @@ export class RepositoryWatcher {
 
     private gotBehind(behind: number) {
         // Display a message box to the user
-		vscode.window.showErrorMessage(
+		showNotification(
             `There ${behind === 1
                 ? 'is'
                 : 'are'
