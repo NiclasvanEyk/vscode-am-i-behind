@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { GitExtension, API } from '../libs/git';
+import { GitExtension } from '../libs/git';
 import { log } from './log';
 
 export async function waitForGitExtension(
@@ -7,15 +7,14 @@ export async function waitForGitExtension(
     checkEveryMs = 1000,
     tries = 0,
     onError: () => void = () => {}
-): Promise<API> {
+): Promise<GitExtension> {
     log('Waiting for Git Extension to be ready...');
 
     try {
         const api = vscode
             .extensions
             .getExtension<GitExtension>('vscode.git')!
-            .exports
-            .getAPI(1);
+            .exports;
 
             log(`Git Extension is ready after ${tries} tries!`);
 
