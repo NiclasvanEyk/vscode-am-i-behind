@@ -1,4 +1,6 @@
-# Am I Behind?
+# Am I Behind? [NO UPDATES]
+
+> Since I am not really using VS Code as my main editor anymore, I have stopped development on this extension. Feel free to fork / republish this if you want.
 
 This is a small extension that shows you a notification if you are opening a
 project and there are new changes on the remote.
