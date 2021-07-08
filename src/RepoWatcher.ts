@@ -1,4 +1,3 @@
-import * as vscode from 'vscode';
 import { Repository, RepositoryState } from '../libs/git';
 import { log } from './log';
 import { showNotification } from './show-notification';
@@ -50,7 +49,6 @@ export class RepositoryWatcher {
 
     onStateChange(state: RepositoryState) {
         const head = state.HEAD;
-        log(`There were changes for ${this.repository.rootUri}`);
 
         if (head !== undefined) {
             const behind = head.behind;
